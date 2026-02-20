@@ -1,7 +1,4 @@
-// Mainnet: solana config set -um
-// Devnet: solana config set -ud
-// Testnet: solana config set -ut
-// Localhost: solana config set -ul
+
 
 export const achu = await fetch('https://api.devnet.solana.com',{
     method:"POST",
