@@ -67,6 +67,12 @@ A regular token account can have any random address, which would be a nightmare 
 
 is technically botth a token account in terms of its data structure and a PDA in terms of its address as its dervied deterministically unlike the wallet which has a pvt-pub key pair. ATA_Address = f(User_Wallet_Address, Token_Mint_Address), since this formula is publically available ATA address can be calculated without asking the user or new account can be created if it doesnt exist.
 
+# System Program.
+It does the following things --> Creates Account,Transfer SOL, Assign Ownership, Allocates space.
+
+When you want to add data, you change the owner to appropriate program(eg: token program) and provided you have sufficent SOL for rent you can add the data using the current owner-program. System program cannot add data to random accounts owned by another program.
+
+
 # Solana CLI
 
 solana config get --> to veiw which env are you in
@@ -83,9 +89,6 @@ solana-keygen new --> creates a new keypair
 solana balance <public key> 
 solana transfer  <public key> <amount>
 
-<!-- 50:50 -->
-
-
 
 # https://animotvslash.org/jujutsu-kaisen-the-culling-game-part-1-season-3-episode-5/
 
@@ -93,5 +96,3 @@ solana transfer  <public key> <amount>
      1> turbine protocol  
      2> gulf of stream protocol
      3> Stake-Weighted Quality of Service (QoS)
-
-<!-- 9 mins -->
